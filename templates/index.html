@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículum - Mario Villarín</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="https://fp.andel.es/wp-content/uploads/2017/05/andel-logo.png" height="50px" width="120px">
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#formacion">Formación</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <button onclick="toggleTheme()">Cambiar Tema</button>
+                    <script>
+                        function toggleTheme() {
+                            document.body.classList.toggle('dark-theme');
+
+                            // Seleccionamos TODOS los elementos relevantes y aplicamos la clase dark-theme
+                            document.querySelectorAll('*').forEach(element => {
+                                if (['SECTION', 'DIV', 'P', 'LABEL', 'H2'].includes(element.tagName)) {
+                                    element.classList.toggle('dark-theme');
+                                }
+                            });
+                        }
+                    </script>
+                    <style>
+                        body.dark-theme {
+                            background-color: #333;
+                            color: white;
+                        }
+                        section.dark-theme, div.dark-theme, p.dark-theme, label.dark-theme, h2.dark-theme {
+                            background-color: #444 !important;
+                            color: white !important;
+                            border: 1px solid #555;
+                        }
+                    </style>       
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <!-- Sección de Inicio -->
+        <section id="inicio" class="hero">
+            <h1>Mario Villarín</h1>
+            <p>Administrador de Sistemas en Red</p>
+        </section>
+
+        <!-- Sección Sobre Mí -->
+        <section id="sobre-mi">
+            <h2>Sobre Mí</h2>
+            <p>
+                Hola, soy Mario, un apasionado de la tecnología con experiencia en administración de sistemas, redes y programación. Me destaco por mi capacidad para trabajar en equipo y bajo presión, así como por mi atención al detalle y trato con clientes. Siempre busco aprender y mejorar mis habilidades para ofrecer soluciones eficientes y de calidad.
+            </p>
+        </section>
+
+        <!-- Sección de Experiencia Laboral -->
+        <section id="experiencia">
+            <h2>Experiencia Laboral</h2>
+            <div class="project">
+                <h3>Prácticas FPI en Técnico de Sistemas Operativos en Red</h3>
+                <p><strong>Soluciones – Infosolutions & Internet Services S.I.</strong> (Marzo 2023 - Junio 2023)</p>
+                <ul>
+                    <li>Gestión de incidencias y resolución de problemas en TI.</li>
+                    <li>Configuración y optimización de equipos y redes.</li>
+                    <li>Instalación y mantenimiento de software y hardware.</li>
+                </ul>
+            </div>
+            <div class="project">
+                <h3>Dependiente</h3>
+                <p><strong>Popeyes</strong> (Julio 2023 - Septiembre 2023)</p>
+                <ul>
+                    <li>Atención al cliente y gestión de pedidos.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Sección de Formación -->
+        <section id="formacion">
+            <h2>Formación</h2>
+            <div class="project">
+                <h3>Grado en Administración de Sistemas en Red</h3>
+                <p><strong>Ándel Instituto Tecnológico</strong> (2023 - 2025)</p>
+            </div>
+            <div class="project">
+                <h3>Grado en Sistemas Microinformáticos en Red</h3>
+                <p><strong>Ándel Instituto Tecnológico</strong> (2021 - 2023)</p>
+            </div>
+            <div class="project">
+                <h3>Educación Secundaria Obligatoria</h3>
+                <p><strong>SEI Nuestra Señora de la Concepción</strong> (2017 - 2021)</p>
+            </div>
+        </section>
+
+        <!-- Sección de Habilidades -->
+        <section id="habilidades">
+            <h2>Habilidades</h2>
+            <div class="galeria">
+                <!-- Programación de Software -->
+                <div class="item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" alt="Programación">
+                    <p>Programación de Software</p>
+                    <div class="resumen">
+                        Desarrollo de aplicaciones en Python, Java y JavaScript. Creación de sitios web con HTML, CSS y frameworks modernos.
+                    </div>
+                </div>
+
+                <!-- Administración de Redes -->
+                <div class="item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2282/2282188.png" alt="Redes">
+                    <p>Administración de Redes</p>
+                    <div class="resumen">
+                        Configuración y mantenimiento de redes LAN/WAN. Resolución de incidencias y optimización de infraestructuras de red.
+                    </div>
+                </div>
+
+                <!-- Mantenimiento de Hardware -->
+                <div class="item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3039/3039010.png" alt="Hardware">
+                    <p>Mantenimiento de Hardware</p>
+                    <div class="resumen">
+                        Reparación y actualización de equipos informáticos. Diagnóstico y solución de problemas de hardware.
+                    </div>
+                </div>
+
+                <!-- Gestión de Sistemas -->
+                <div class="item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1084/1084984.png" alt="Sistemas">
+                    <p>Gestión de Sistemas</p>
+                    <div class="resumen">
+                        Administración de servidores y sistemas operativos. Implementación de soluciones de virtualización y backup.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Sección de Idiomas -->
+        <!-- Sección de Idiomas -->
+        <section id="idiomas">
+            <h2>Idiomas</h2>
+            <div class="galeria">
+                <!-- Español -->
+                <div class="item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/197/197593.png" alt="Español">
+                    <p>Español</p>
+                    <div class="resumen">
+                        Idioma nativo. Competencia lingüística completa en lectura, escritura y conversación.
+                    </div>
+                </div>
+
+                <!-- Inglés -->
+                <div class="item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/197/197374.png" alt="Inglés">
+                    <p>Inglés</p>
+                    <div class="resumen">
+                        Nivel B1 (Intermedio). Capacidad para comunicarse en situaciones cotidianas y comprender textos básicos.
+                    </div>
+                </div>
+            </div>
+        </section>
+            <section class="repos">
+                <h2>Mis Repositorios de GitHub</h2>
+                {% if repos %}
+                    {% for repo in repos %}
+                        <div class="repo">
+                            <h2><a href="{{ repo.html_url }}" target="_blank">{{ repo.name }}</a></h2>
+                            <p>{{ repo.description if repo.description else 'Sin descripción' }}</p>
+                            <p><strong>Lenguaje:</strong> {{ repo.language }}</p>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <p>No se encontraron repositorios.</p>
+                {% endif %}
+            </section>
+        </main>
+        <!-- Sección de Contacto -->
+        <section id="contacto">
+            <h2>Contactame</h2>
+            <!-- modify this form HTML and place wherever you want your form -->
+                <form action="https://formspree.io/f/mnnjgwvb" method="POST">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+        </section>
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p><strong>Teléfono:</strong> 668-511-097</p>
+            <p><strong>Email:</strong> <a href="mailto:mario.villarin2005@gmail.com">mario.villarin2005@gmail.com</a></p>
+            <p><strong>Dirección:</strong> Avd de la Dehesa 3, Navalcarnero, CP: 28600</p>
+        </section>
+    </div>
+</body>
+</html>
+
+

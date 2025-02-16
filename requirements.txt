@@ -1,0 +1,5 @@
+Flask==2.0.1
+Werkzeug==2.0.3  # Usa una versión compatible con Flask 2.0.1
+flask
+flask-mail
+requests
